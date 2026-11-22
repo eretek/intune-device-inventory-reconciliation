@@ -1,0 +1,39 @@
+{
+ "tests": [
+  {
+   "in": {
+    "entra": "displayName,deviceId\nPC1,aaa\nPC1,bbb",
+    "ad": "Name\nPC1"
+   },
+   "v": {
+    "ambiguous": 2
+   }
+  },
+  {
+   "in": {
+    "entra": "displayName,deviceId\nPC1,aaa",
+    "intune": "deviceName,azureADDeviceId\nPC1,AAA",
+    "ad": "Name\nPC1"
+   },
+   "v": {
+    "ambiguous": 0,
+    "unmatched": 0
+   }
+  },
+  {
+   "in": {
+    "entra": "displayName,deviceId\nPC1,aaa",
+    "intune": "deviceName,azureADDeviceId\nX,zzz"
+   },
+   "v": {
+    "unmatched": 1
+   }
+  },
+  {
+   "in": {
+    "entra": "name\nPC1"
+   },
+   "err": "entra"
+  }
+ ]
+}

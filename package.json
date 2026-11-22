@@ -1,0 +1,15 @@
+{
+  "name": "intune-device-inventory-reconciliation",
+  "version": "1.1.3",
+  "private": true,
+  "description": "Match AD computer, Microsoft Entra device and Intune lists by deviceId and name; certain, probable and ambiguous matches and missing records are separated.",
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://sistem.eretek.com/en/tools/intune-device-inventory-reconciliation",
+  "scripts": {
+    "start": "node scripts/serve.js",
+    "test": "node test/run.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
